@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="mgcrea.ngStrapDocs">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS TAb</title>
+    
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/docs.min.css">
+    
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-strap.min.js"></script>
+	<script src="js/angular-strap.tpl.min.js"></script> 
+	<script src="js/smart-table.debug.js"></script>
+	
+    <script src="js/TabApp.js"></script>
+    
+  </head>
+
+<body >
+	 <hr>
+	<!-- bsActivePane is optional -->
+	<div ng-controller="MainCtrl">
+		<div bs-active-pane="tabs.activeTab" bs-tabs>
+			<div ng-repeat="tab in tabs" data-title="{{ tab.title }}"
+				name="{{ tab.title }}" disabled="{{ tab.disabled }}"
+				ng-bind="tab.content" bs-pane>
+			</div>
+		</div>	
+	</div>
+		
+	<div ng-controller="btnctrl">
+		<div>
+			<button type="button" class="btn btn-sm btn-primary" data-animation="am-flip-x" bs-dropdown="dropdown" aria-haspopup="true" aria-expanded="false">Click to toggle dropdown
+	  			<br>
+	  			<small>clicking this will show dropdown list</small>
+			</button>	
+		</div>
+	</div>
+	
+	
+	
+</body>
+</html>
